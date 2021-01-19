@@ -1,0 +1,29 @@
+<app-alert-component [display]="displayAlert" [type]="alertType" [message]="alertMessage" (closeEvent)="closeAlert()">
+</app-alert-component>
+
+<form [formGroup]="addBooksForm" (ngSubmit)="addBook()">
+    <div class="form">
+        <h3 class="text-warning" style="margin-left: 150px; text-align: left;"> Add Books </h3>
+        <app-input [name]="'bookId'" [type]="'number'" [placeholder]="'bookId'" [formGroup]="addBooksForm">
+        </app-input>
+        <app-input [name]="'count'" [type]="'number'" [placeholder]="'count'" [formGroup]="addBooksForm">
+        </app-input>
+        <app-input [name]="'bookName'" [placeholder]="'bookName'" [formGroup]="addBooksForm">
+        </app-input>
+        <app-input [name]="'authorName'"  [placeholder]="'authorName'" [formGroup]="addBooksForm">
+        </app-input>
+        <app-input [name]="'fromdate'" [type]="'date'" [placeholder]="'fromdate'" [formGroup]="addBooksForm">
+        </app-input>
+        <app-input [name]="'endDate'" [type]="'date'" [placeholder]="'endDate'" [formGroup]="addBooksForm">
+        </app-input>
+        <app-input [name]="'genre'"   [placeholder]="'genre'" [formGroup]="addBooksForm">
+        </app-input>
+        <app-input [name]="'status'"   [placeholder]="'status'" [formGroup]="addBooksForm">
+        </app-input>
+        <app-input [name]="'bookStatus'"   [placeholder]="'bookStatus'" [formGroup]="addBooksForm">
+        </app-input>       
+        <div class="panel-footer ml-4">
+            <button class="btn btn-success" type="submit" id="save"> Save </button>
+        </div>
+    </div>
+</form>

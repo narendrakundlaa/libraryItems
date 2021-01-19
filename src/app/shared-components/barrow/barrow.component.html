@@ -1,0 +1,30 @@
+<app-alert-component [display]="displayAlert" [type]="alertType" [message]="alertMessage" (closeEvent)="closeAlert()">
+</app-alert-component>
+
+
+<form [formGroup]="barrowBooksForm" (ngSubmit)="barrowBook(barrowBooksForm)" >
+    <div class="form">
+        <h3 class="text-warning" > Borrow Books </h3>
+        <app-input [name]="'bookId'" [type]="'number'" [placeholder]="'bookId'" [formGroup]="barrowBooksForm">
+        </app-input>
+        <app-input [name]="'count'" [type]="'number'" [placeholder]="'count'" [formGroup]="barrowBooksForm">
+        </app-input>
+        <app-input [name]="'bookName'" [placeholder]="'bookName'" [formGroup]="barrowBooksForm">
+        </app-input>
+        <app-input [name]="'authorName'"  [placeholder]="'authorName'" [formGroup]="barrowBooksForm">
+        </app-input>
+        <app-input [name]="'fromdate'" [type]="'date'" [placeholder]="'fromdate'" [formGroup]="barrowBooksForm">
+        </app-input>
+        <app-input [name]="'endDate'" [type]="'date'" [placeholder]="'endDate'" [formGroup]="barrowBooksForm">
+        </app-input>
+        <app-input [name]="'genre'"   [placeholder]="'genre'" [formGroup]="barrowBooksForm">
+        </app-input>
+        <app-input [name]="'status'"   [placeholder]="'status'" [formGroup]="barrowBooksForm">
+        </app-input>
+        <app-input [name]="'bookStatus'"   [placeholder]="'bookStatus'" [formGroup]="barrowBooksForm">
+        </app-input>
+        <div class="panel-footer ml-4">
+            <button class="btn btn-warning" type="submit" id="save"> Borrow </button>
+        </div>
+    </div>
+</form>

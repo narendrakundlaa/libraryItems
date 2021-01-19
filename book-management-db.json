@@ -1,0 +1,63 @@
+{
+  "login": [
+    {
+      "email": "n@gmail.com",
+      "password": "123456",
+      "id": 1
+    }
+  ],
+  "bookList": [
+    {
+      "id": 1,
+      "bookId": 10,
+      "bookName": "Java 8 Features",
+      "authorName": "nare",
+      "fromdate": "2020-12-30",
+      "endDate": "2020-12-30",
+      "genre": "Okay",
+      "status": "Avalable",
+      "bookStatus": "not available",
+      "count": 20
+    },
+    {
+      "bookId": "1",
+      "bookName": "Devops",
+      "fromdate": "2021-01-29",
+      "endDate": "2021-01-31",
+      "status": "okay",
+      "bookStatus": "available",
+      "count": "2",
+      "authorName": "ICICI",
+      "genre": "okay",
+      "id": 3
+    }
+  ],
+  "requestList": [
+    {
+      "bookId": 10,
+      "bookName": "Java 8 Features",
+      "authorName": "HCL Foundation 3",
+      "fromdate": "2020-12-30",
+      "endDate": "2020-12-30",
+      "genre": "Okay",
+      "status": "Okay",
+      "bookStatus": "available",
+      "count": "200",
+      "id": 1
+    }
+  ],
+  "borrowedList": [
+    {
+      "bookId": 10,
+      "bookName": "Java 8 Features",
+      "authorName": "nare",
+      "fromdate": "2020-12-30",
+      "endDate": "2020-12-30",
+      "genre": "Okay",
+      "status": "Avalable",
+      "bookStatus": "not available",
+      "count": 20,
+      "id": 1
+    }
+  ]
+}

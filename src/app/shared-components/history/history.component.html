@@ -1,0 +1,28 @@
+<app-alert-component [display]="displayAlert" [type]="alertType" [message]="alertMessage" (closeEvent)="closeAlert()">
+</app-alert-component>
+
+<table class="table" *ngIf="books">
+    <thead>
+        <tr>
+            <th>Book Name</th>
+            <th>Author Name</th>
+            <th>Book Status</th>
+            <th>No of items available</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+
+        <tr *ngFor="let book of books">
+            <td> {{book.bookName}}</td>
+            <td> {{book.authorName}}</td>
+            <td>{{book.bookStatus}}</td>
+            <td>{{book.count}}</td>
+            <td>
+                <a routerLinkActive="active" class="text-success"
+                    (click)="bookID(book.id, $event)"> Release</a>
+                
+            </td>
+        </tr>
+    </tbody>
+</table>
