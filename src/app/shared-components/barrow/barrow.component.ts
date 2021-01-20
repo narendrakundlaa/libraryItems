@@ -110,17 +110,18 @@ export class BarrowComponent implements OnInit {
       if (borrowedBooks) {
         this.alertType = 'success';
         this.displayAlert = true;
-        this.alertMessage = `Thanks for donate ${this.barrowBooksForm.controls.bookName.value} `;
+        this.alertMessage = `Thanks  ${this.barrowBooksForm.controls.bookName.value} `;
       }
-  });
-}
-mapFormValuesToBookModel() {
-  this.books = Object.assign({}, this.books, this.barrowBooksForm.value);
-}
+    });
+  }
+  mapFormValuesToBookModel() {
+    this.books = Object.assign({}, this.books, this.barrowBooksForm.value);
+  }
 
-closeAlert() {
-  this.displayAlert = false;
-  this.router.navigate(['list']);
-}
+  closeAlert() {
+    this.displayAlert = false;
+    this.router.navigate(['list']);
+  }
 
+  get f() { return this.barrowBooksForm.controls; }
 }

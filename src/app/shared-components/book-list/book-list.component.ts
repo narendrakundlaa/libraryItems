@@ -56,20 +56,31 @@ export class BookListComponent implements OnInit {
 
 
   }
-  bookID(id: number, e: any) {
-    // this.router.navigate(['/editRequest', id]);
-    e.target.outText === 'request' ? this.router.navigate(['/editRequest', id]) : this.router.navigate(['/editBorrow', id]);
-    // this.bookService.loginStautus.subscribe(data => {
-    //   // alert('login stauts' + data)  this._router.navigate(['/edit', employeeId]);
-    //   this.isLogin = data;
-    //   if (this.isLogin) {
-    //     e.target.outText === 'request' ? this.router.navigate([['/editRequest', id]]) : this.router.navigate(['/editBorrow', id]);
-    //   } else {
-    //     this.alertType = 'warning';
-    //     this.displayAlert = true;
-    //     this.alertMessage = `Please login before ${e.target.outerText} an item`;
-    //   }
-    // });
+
+  borrow(id: number) {
+
+    this.bookService.loginStautus.subscribe(data => {
+      this.isLogin = data;
+      if (this.isLogin) {
+        this.router.navigate(['/editBorrow', id]);
+      } else {
+        this.alertType = 'warning';
+        this.displayAlert = true;
+        this.alertMessage = `Please login before borrow an item`;
+      }
+    });
+  }
+  request(id: number) {
+    this.bookService.loginStautus.subscribe(data => {
+      this.isLogin = data;
+      if (this.isLogin) {
+        this.router.navigate(['/editRequest', id]);
+      } else {
+        this.alertType = 'warning';
+        this.displayAlert = true;
+        this.alertMessage = `Please login before request an item`;
+      }
+    });
   }
   closeAlert() {
     this.displayAlert = false;

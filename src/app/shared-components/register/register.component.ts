@@ -45,6 +45,7 @@ export class RegisterComponent implements OnInit {
     }
 
     const reqObj = {
+      id: null,
       email: this.registerForm.value.email,
       password: this.registerForm.value.password
     };

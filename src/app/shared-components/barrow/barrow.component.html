@@ -2,8 +2,8 @@
 </app-alert-component>
 
 
-<form [formGroup]="barrowBooksForm" (ngSubmit)="barrowBook(barrowBooksForm)" >
-    <div class="form">
+<form [formGroup]="barrowBooksForm" (ngSubmit)="barrowBook()">
+    <!-- <div class="form">
         <h3 class="text-warning" > Borrow Books </h3>
         <app-input [name]="'bookId'" [type]="'number'" [placeholder]="'bookId'" [formGroup]="barrowBooksForm">
         </app-input>
@@ -26,5 +26,90 @@
         <div class="panel-footer ml-4">
             <button class="btn btn-warning" type="submit" id="save"> Borrow </button>
         </div>
-    </div>
+    </div> -->
+    
+    <div class="container">        
+        <div class="form-group">
+            <label for="bookId">bookId </label>
+            <input style="width: 500px" type="text" class="form-control" id="bookId" placeholder="Enter bookId"
+                formControlName="bookId" name="bookId"
+                [ngClass]="{ 'is-invalid': submitted && f.bookId.errors }" />
+            <div *ngIf="submitted && f.bookId.errors" class="invalid-feedback">
+                <div *ngIf="f.bookId.errors.required">bookId is required</div>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="bookId">count </label>
+            <input style="width: 500px" type="text" class="form-control" id="count" placeholder="Enter count"
+                formControlName="count" name="count"
+                [ngClass]="{ 'is-invalid': submitted && f.count.errors }" />
+            <div *ngIf="submitted && f.count.errors" class="invalid-feedback">
+                <div *ngIf="f.count.errors.required">count is required</div>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="bookId">bookName </label>
+            <input style="width: 500px" type="text" class="form-control" id="bookName" placeholder="Enter bookName"
+                formControlName="bookName" name="bookName"
+                [ngClass]="{ 'is-invalid': submitted && f.bookName.errors }" />
+            <div *ngIf="submitted && f.bookName.errors" class="invalid-feedback">
+                <div *ngIf="f.bookName.errors.required">bookName is required</div>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="bookId">authorName </label>
+            <input style="width: 500px" type="text" class="form-control" id="authorName" placeholder="Enter authorName"
+                formControlName="authorName" name="authorName"
+                [ngClass]="{ 'is-invalid': submitted && f.authorName.errors }" />
+            <div *ngIf="submitted && f.authorName.errors" class="invalid-feedback">
+                <div *ngIf="f.authorName.errors.required">authorName is required</div>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="bookId">fromdate </label>
+            <input style="width: 500px" type="date" class="form-control" id="fromdate" placeholder="Enter fromdate"
+                formControlName="fromdate" name="fromdate"
+                [ngClass]="{ 'is-invalid': submitted && f.fromdate.errors }" />
+            <div *ngIf="submitted && f.fromdate.errors" class="invalid-feedback">
+                <div *ngIf="f.fromdate.errors.required">fromdate is required</div>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="bookId">endDate </label>
+            <input style="width: 500px" type="text" class="form-control" id="endDate" placeholder="Enter endDate"
+                formControlName="endDate" name="endDate"
+                [ngClass]="{ 'is-invalid': submitted && f.endDate.errors }" />
+            <div *ngIf="submitted && f.endDate.errors" class="invalid-feedback">
+                <div *ngIf="f.endDate.errors.required">endDate is required</div>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="genre">genre </label>
+            <input style="width: 500px" type="text" class="form-control" id="genre" placeholder="Enter genre"
+                formControlName="genre" name="genre"
+                [ngClass]="{ 'is-invalid': submitted && f.genre.errors }" />
+            <div *ngIf="submitted && f.genre.errors" class="invalid-feedback">
+                <div *ngIf="f.genre.errors.required">genre is required</div>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="status">status </label>
+            <input style="width: 500px" type="text" class="form-control" id="status" placeholder="Enter status"
+                formControlName="status" name="status"
+                [ngClass]="{ 'is-invalid': submitted && f.status.errors }" />
+            <div *ngIf="submitted && f.status.errors" class="invalid-feedback">
+                <div *ngIf="f.status.errors.required">status is required</div>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="bookStatus">bookStatus </label>
+            <input style="width: 500px" type="text" class="form-control" id="bookStatus" placeholder="Enter bookStatus"
+                formControlName="bookStatus" name="bookStatus"
+                [ngClass]="{ 'is-invalid': submitted && f.bookStatus.errors }" />
+            <div *ngIf="submitted && f.bookStatus.errors" class="invalid-feedback">
+                <div *ngIf="f.bookStatus.errors.required">bookStatus is required</div>
+            </div>
+        </div>
+        <button type="submit" class="btn btn-primary">Borrow book</button>
+</div>
 </form>

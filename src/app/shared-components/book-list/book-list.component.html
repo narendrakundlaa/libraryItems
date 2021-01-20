@@ -34,9 +34,9 @@
             <td>{{book.count}}</td>
             <td>
                 <a *ngIf="book.bookStatus == 'available'" routerLinkActive="active" class="text-success"
-                    (click)="bookID(book.id, $event)"> Borrow</a>
+                    (click)="borrow(book.id)"> Borrow</a>
                 <a *ngIf="book.bookStatus != 'available'" class="text-warning" routerLinkActive="active"
-                    (click)="bookID(book.id, $event)"> Request</a>
+                    (click)="request(book.id)"> Request</a>
             </td>
         </tr>
     </tbody>

@@ -1,9 +1,9 @@
 <app-alert-component [display]="displayAlert" [type]="alertType" [message]="alertMessage" (closeEvent)="closeAlert()">
 </app-alert-component>
 
-<form [formGroup]="requestBooksForm" (ngSubmit)="requestBook()" style="margin-left: 82px;">
+<form [formGroup]="requestBooksForm" (ngSubmit)="requestBook()">
     <div class="form">
-        <h3 class="text-warning" style="margin-left: 150px"> Request Books </h3>
+        <h3 class="text-warning" > Request Books </h3>
         <app-input [name]="'bookId'" [type]="'number'" [placeholder]="'bookId'" [formGroup]="requestBooksForm">
         </app-input>
         <app-input [name]="'count'" [type]="'number'" [placeholder]="'count'" [formGroup]="requestBooksForm">
